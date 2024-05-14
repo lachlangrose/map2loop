@@ -13,7 +13,7 @@ RUN apt-get update -qq && \
     libtinfo5\
     libtiff5\
     libgl1-mesa-glx
-    
+
 
 COPY . /map2loop 
 
@@ -26,5 +26,10 @@ RUN conda install -c conda-forge -c loop3d LoopStructural -y
 RUN conda install -c conda-forge --file ./docs/requirements.txt -y
 
 RUN pip install .
+
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+ENTRYPOINT ["/tini", "--"]
 
 WORKDIR /
