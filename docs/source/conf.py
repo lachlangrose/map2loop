@@ -104,17 +104,13 @@ autosummary_generate = True
 autosummary_mock_imports = ["LoopStructural.interpolators._cython"]
 # Sphinx gallery examples
 
-
-<<<<<<< HEAD
 # from LoopStructural.visualisation.sphinx_scraper import Scraper as LoopScraper
 from sphinx_gallery.sorting import ExampleTitleSortKey
 
-=======
 
 # from LoopStructural.visualisation.sphinx_scraper import Scraper as LoopScraper
 from sphinx_gallery.sorting import ExampleTitleSortKey
 
->>>>>>> e8b1ada (docs: remove lavavu; no need for 3D vis for the examples)
 sphinx_gallery_conf = {
     "examples_dirs": ["../examples/"],
     "gallery_dirs": ["_auto_examples/"],  # path to where to save gallery generated output
